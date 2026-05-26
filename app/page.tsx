@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type College = {
@@ -19,7 +20,7 @@ export default function Home() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    fetch("/api/colleges")
+    fetch("/api/colleges", { cache: "no-store" })
       .then((res) => res.json())
       .then((data) => setColleges(data));
   }, []);
@@ -84,9 +85,12 @@ export default function Home() {
               📚 Courses: {college.courses}
             </p>
 
-            <button className="mt-5 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+            <Link
+              href={`/college/${college.id}`}
+              className="inline-block mt-5 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
+            >
               View Details
-            </button>
+            </Link>
 
           </div>
 

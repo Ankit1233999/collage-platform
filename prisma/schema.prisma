@@ -21,5 +21,7 @@ model College {
   rating     Float
   placements String
   courses    String
-  image      String 
+  image      String
+  students   Int @default(0)
+
 }

@@ -13,6 +13,7 @@ async function main() {
         placements: "98%",
         courses: "B.Tech, M.Tech, MBA",
         image: "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=800&q=80",
+        students: 14500,
       },
 
       {
@@ -23,6 +24,7 @@ async function main() {
         placements: "97%",
         courses: "B.Tech, M.Tech",
         image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=800&q=80",
+        students: 13200,
       },
 
       {
@@ -33,6 +35,7 @@ async function main() {
         placements: "97%",
         courses: "B.Tech, M.Tech",
         image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=800&q=80",
+        students: 12500,
       },
 
       {
@@ -43,6 +46,7 @@ async function main() {
         placements: "98%",
         courses: "B.Tech, MBA",
         image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&w=800&q=80",
+        students: 10200,
       },
 
       {
@@ -53,6 +57,7 @@ async function main() {
         placements: "93%",
         courses: "B.Tech, MCA",
         image: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?auto=format&fit=crop&w=800&q=80",
+        students: 10400,
       },
 
       {
@@ -63,6 +68,7 @@ async function main() {
         placements: "88%",
         courses: "B.Tech, M.Tech",
         image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80",
+        students: 8100,
       },
 
       {
@@ -73,6 +79,7 @@ async function main() {
         placements: "90%",
         courses: "B.Tech, MCA",
         image: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80",
+        students: 7600,
       },
 
       {
@@ -83,6 +90,7 @@ async function main() {
         placements: "89%",
         courses: "B.Tech, MBA",
         image: "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=800&q=80",
+        students: 11000,
       },
 
       {
@@ -93,6 +101,7 @@ async function main() {
         placements: "85%",
         courses: "B.Tech, BCA",
         image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+        students: 14000,
       },
 
       {
@@ -103,6 +112,7 @@ async function main() {
         placements: "96%",
         courses: "B.Tech, M.Tech",
         image: "https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?auto=format&fit=crop&w=800&q=80",
+        students: 8800,
       },
     ],
   });
