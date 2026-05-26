@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { prisma } from "../../../lib/prisma";
+import { getPrismaClient } from "../../../lib/prisma";
 
 function NotFoundState() {
   return (
@@ -35,6 +35,7 @@ export default async function CollegeDetailPage({
     return <NotFoundState />;
   }
 
+  const prisma = getPrismaClient();
   const college = await prisma.college.findUnique({
     where: {
       id: collegeId,
