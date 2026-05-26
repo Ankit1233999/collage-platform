@@ -2,9 +2,20 @@
 
 import { useEffect, useState } from "react";
 
+type College = {
+  id: string;
+  name: string;
+  location: string;
+  fees: number;
+  rating: number;
+  placements: string;
+  courses: string;
+  image: string;
+};
+
 export default function Home() {
 
-  const [colleges, setColleges] = useState([]);
+  const [colleges, setColleges] = useState<College[]>([]);
   const [search, setSearch] = useState("");
 
   useEffect(() => {
@@ -13,7 +24,7 @@ export default function Home() {
       .then((data) => setColleges(data));
   }, []);
 
-  const filteredColleges = colleges.filter((college: any) =>
+  const filteredColleges = colleges.filter((college) =>
     college.name.toLowerCase().includes(search.toLowerCase())
   );
 
@@ -40,14 +51,14 @@ export default function Home() {
       {/* College Cards */}
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-        {filteredColleges.map((college: any) => (
+        {filteredColleges.map((college) => (
 
-          <div className="bg-white p-6 rounded -x1 shadow -lg">
+          <div key={college.id} className="bg-white p-6 rounded-xl shadow-lg">
             <img
               src={college.image}
               alt={college.name}
-            className="w-full h-48 object-cover rounded-lg mb-4"/>
-          
+              className="w-full h-48 object-cover rounded-lg mb-4"
+            />
 
             <h2 className="text-3xl font-bold text-gray-800 mb-4">
               {college.name}
