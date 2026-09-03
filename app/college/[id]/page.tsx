@@ -1,5 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import {
+  getCollegeImage,
+  getOfficialWebsite,
+} from "../../../lib/college-websites";
 import { getPrismaClient } from "../../../lib/prisma";
 
 function NotFoundState() {
@@ -46,6 +50,9 @@ export default async function CollegeDetailPage({
     return <NotFoundState />;
   }
 
+  const officialWebsite = getOfficialWebsite(college.name);
+  const collegeImage = getCollegeImage(college.name, college.image);
+
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 px-4 py-10 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
@@ -66,7 +73,7 @@ export default async function CollegeDetailPage({
           <section className="space-y-6 rounded-[2rem] bg-white/5 p-8 shadow-xl shadow-slate-900/40 ring-1 ring-white/10 backdrop-blur">
             <div className="overflow-hidden rounded-[1.5rem] border border-white/10 shadow-xl shadow-slate-950/40">
               <Image
-                src={college.image}
+                src={collegeImage}
                 alt={college.name}
                 width={1200}
                 height={700}
@@ -172,6 +179,17 @@ export default async function CollegeDetailPage({
             >
               Back to list
             </Link>
+
+            {officialWebsite ? (
+              <a
+                href={officialWebsite}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex w-full items-center justify-center rounded-full border border-cyan-300/40 px-6 py-3 text-sm font-semibold uppercase tracking-[.16em] text-cyan-100 transition hover:border-cyan-200 hover:bg-cyan-300/10"
+              >
+                Official Website
+              </a>
+            ) : null}
           </aside>
         </div>
       </div>
