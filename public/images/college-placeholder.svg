@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">College campus placeholder</title>
+  <desc id="desc">A simple illustrated college building used when a campus photo cannot load.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#dff5f0"/>
+      <stop offset="0.55" stop-color="#f5efe1"/>
+      <stop offset="1" stop-color="#f9c97d"/>
+    </linearGradient>
+    <linearGradient id="front" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#e7efe9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#sky)"/>
+  <circle cx="1000" cy="135" r="64" fill="#f6b647"/>
+  <path d="M0 544c138-44 273-64 405-60 153 5 262 58 416 54 126-3 244-39 379-98v260H0Z" fill="#22443e" opacity=".16"/>
+  <path d="M90 554h1020v146H90Z" fill="#315b4f"/>
+  <path d="M226 326h748v236H226Z" fill="url(#front)"/>
+  <path d="M186 296h828l-414-154Z" fill="#1f4f47"/>
+  <path d="M600 142 246 274h708Z" fill="#286b5f"/>
+  <path d="M320 356h92v206h-92Zm156 0h92v206h-92Zm156 0h92v206h-92Zm156 0h92v206h-92Z" fill="#f6b647"/>
+  <path d="M341 384h50v178h-50Zm156 0h50v178h-50Zm156 0h50v178h-50Zm156 0h50v178h-50Z" fill="#173d37" opacity=".82"/>
+  <path d="M530 440h140v122H530Z" fill="#173d37"/>
+  <path d="M514 414h172v28H514Z" fill="#286b5f"/>
+  <path d="M186 562h828v52H186Z" fill="#173d37"/>
+  <path d="M144 614h912v46H144Z" fill="#f5efe1"/>
+  <path d="M472 224h256v58H472Z" fill="#f5efe1"/>
+  <path d="M504 246h192" stroke="#286b5f" stroke-width="14" stroke-linecap="round"/>
+  <text x="600" y="650" fill="#173d37" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" text-anchor="middle">Campus image unavailable</text>
+</svg>
