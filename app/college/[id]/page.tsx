@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
+import { CollegeImage } from "../../components/CollegeImage";
 import {
   getCollegeImage,
   getOfficialWebsite,
@@ -72,7 +72,7 @@ export default async function CollegeDetailPage({
         <div className="grid gap-8 lg:grid-cols-[1.15fr_.85fr]">
           <section className="space-y-6 rounded-[2rem] bg-white/5 p-8 shadow-xl shadow-slate-900/40 ring-1 ring-white/10 backdrop-blur">
             <div className="overflow-hidden rounded-[1.5rem] border border-white/10 shadow-xl shadow-slate-950/40">
-              <Image
+              <CollegeImage
                 src={collegeImage}
                 alt={college.name}
                 width={1200}

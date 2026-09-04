@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { CollegeImage } from "./components/CollegeImage";
 import { getCollegeImage, getOfficialWebsite } from "../lib/college-websites";
 
 type College = {
@@ -36,7 +36,7 @@ function CollegeCard({ college }: { college: College }) {
 
   return (
     <article className="overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm transition hover:-translate-y-1 hover:border-teal-300 hover:shadow-lg">
-      <Image
+      <CollegeImage
         src={collegeImage}
         alt={college.name}
         width={800}
@@ -279,7 +279,7 @@ export default function Home() {
           </div>
 
           <div className="relative min-h-[360px] overflow-hidden rounded-lg">
-            <Image
+            <CollegeImage
               src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=1200&q=80"
               alt="Students walking through a college campus"
               width={1200}
